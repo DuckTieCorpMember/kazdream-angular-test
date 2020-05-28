@@ -1,0 +1,21 @@
+<div class="student_card-div" *ngIf="student">
+    <div class="student_card-cell">
+        <div class="student_card-bold">ID:</div> <div>{{ss.id}}</div>
+    </div>
+    <div class="student_card-cell">
+        <div class="student_card-bold">Name:</div> <div><input type="text" (keyup)="onKey($event, 'name')" value="{{ss.name}}" /></div>
+    </div>
+    <div class="student_card-cell">
+        <div class="student_card-bold">House:</div> <div><input type="text" (keyup)="onKey($event, 'house')" value="{{ss.house}}" /></div>
+    </div>
+    <div class="student_card-cell">
+        <div class="student_card-bold">Year:</div> <div><input type="number" (keyup)="onKey($event, 'year')" value="{{ss.year}}" /></div>
+    </div>
+    <div class="student_card-cell">
+        <div class="student_card-bold">Score:</div> <div> <input type="number" (keyup)="onKey($event, 'score')" value="{{ss.score}}" /></div>
+    </div>
+    <div class="student_card-cell">
+        <button (mouseup)="saveUpdatedStudent()" class="save-button">S</button>
+        <button (mouseup)="deleteStudent()" class="delete-button">D</button>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.student_card-div{
+    display: flex;
+    flex-flow: column;
+    min-width: 150px;
+    min-height: 200px;
+    margin: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.student_card-cell{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    .student_card-bold{
+        font-weight: bold;
+    }
+}
+
+.save-button{
+    background: darkgreen;
+    color: whitesmoke;
+    border-color: green;
+}
+
+.delete-button{
+    background: maroon;
+    color: whitesmoke;
+    border-color: brown;
+}

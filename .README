@@ -1,0 +1,11 @@
+ZIP includes all folders except "node-modules"
+
+1. Mock data in "mock-students.ts" file.
+2. CRUD setup in student-api.service.ts file.
+3. Logs on top show the status of CRUD requests
+
+P.S. Because I used simulation of database using "angular-in-memory-web-api" after refrshing the page all changes are gone.
+I would create localStorage, but the task was about CRUD, and it works with simulation.
+
+P.P.S. Becuase right now everything is so hectic, and I moving all of my staff from France back to Kazakhstan, I am sorry if there might be mistakes.
+        If they occur, I hope I will receive an offer or a second chance. I really want to work with you. My experience in Kazdream is one of my fondest memories from my years at NU.

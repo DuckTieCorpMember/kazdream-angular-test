@@ -1,0 +1,24 @@
+.students_view-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pages-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.active-page-button{
+    background-color: darkcyan;
+}
+
+// this makes the .modal visible
+.sshow {
+    display: flex;
+    justify-content: center;
+}
+// this makes the element hidden/invisible
+.hhidden {
+    display: none;
+}

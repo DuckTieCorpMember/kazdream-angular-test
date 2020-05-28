@@ -1,0 +1,31 @@
+<span>Enter the size per page (min 1): </span>
+<input class="students_view-size_input" type="number" (keyup)="onKey($event)" [value]="sizePerPage"/>
+<button class="add-student-button" (click)="openAdd()">Add</button>
+<div class="pages-buttons">
+    <div *ngFor="let n of pagesArray">
+        <button [ngClass]="{'active-page-button': activePage==n}" (mousedown)="activePage=n">{{n}}</button>
+    </div>
+</div>
+<div class="students_view-container" *ngIf="students">
+    <div *ngFor="let s of filteredStudents()">
+        <app-student-card [student]="s" (changedEvent)="studentsChanged()"></app-student-card>
+    </div>
+</div>
+<app-add-student-modal id="add-modal" class="hhiden">
+    <div>Add your Hogwarts student here:</div>
+    <div class="body">
+        <div class="student_card-cell">
+            <div class="student_card-bold">Name:</div> <div><input type="text" (keyup)="onAddStudentKey($event, 'name')" value="{{ss.name}}" /></div>
+        </div>
+        <div class="student_card-cell">
+            <div class="student_card-bold">House:</div> <div><input type="text" (keyup)="onAddStudentKey($event, 'house')" value="{{ss.house}}" /></div>
+        </div>
+        <div class="student_card-cell">
+            <div class="student_card-bold">Year:</div> <div><input type="number" (keyup)="onAddStudentKey($event, 'year')" value="{{ss.year}}" /></div>
+        </div>
+        <div class="student_card-cell">
+            <div class="student_card-bold">Score:</div> <div> <input type="number" (keyup)="onAddStudentKey($event, 'score')" value="{{ss.score}}" /></div>
+        </div>
+    </div>
+    <button (click)="addStudent()">Add</button><button (click)="cloaseAdd()">Close</button>
+</app-add-student-modal>
